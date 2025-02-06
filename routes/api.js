@@ -47,14 +47,15 @@ module.exports = function (app) {
 
         let returnNum = convertHandler.convert(initNum, initUnit); 
         let returnUnit = convertHandler.getReturnUnit(initUnit); 
-        console.log(convertHandler.spellOutUnit(initUnit))
-        console.log(convertHandler.spellOutUnit(returnUnit))
+        let resultString = convertHandler.getString(initNum,initUnit,returnNum,returnUnit);
+        
         // Return the results
         res.json({
             initNum: initNum,
             initUnit: initUnit,
             returnNum: returnNum,
-            returnUnit: returnUnit
+            returnUnit: returnUnit,
+            string: resultString
         });
 
     } catch (error) {
