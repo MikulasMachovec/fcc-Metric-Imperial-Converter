@@ -37,7 +37,6 @@ function ConvertHandler() {
 
     return result;
 };
-
   
   this.getUnit = function(input) {
     let result;
@@ -147,7 +146,6 @@ function ConvertHandler() {
       default:
         throw new Error("invalid unit");
     }
-    console.log(result)
     return result;
   };
   
